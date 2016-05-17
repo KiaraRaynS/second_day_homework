@@ -4,9 +4,14 @@ random_number = random.randint(1,100)
 
 
 def computer_guesses():
+    game_mode = str(input('Mode: Easy or Hard? '))
+    if game_mode == str('Hard'):
+        x = 1
+        y = 100
+    else:
+        x = 1
+        y = 10
     guesses_count = 0
-    x = 1
-    y = 100
     while guesses_count < 5:
         computer_guess = random.randint(x,y)
         if computer_guess > random_number:
