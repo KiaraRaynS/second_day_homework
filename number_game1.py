@@ -14,6 +14,7 @@ def number_game():
         user_guess = int(input('Guess a number between: {} '.format(possible_value)))
         if user_guess == random_number:
             print('Congratulations! You guessed the number! ' + str(random_number))
+            break
         elif user_guess > random_number:
             print('Sorry, that number is too high.')
             guesses += 1
@@ -24,8 +25,8 @@ def number_game():
             print('Guesses left: ' + str(4 - guesses))
 
 
-user_answer = str(input('Would you like to play number game? Y/N '))
-repeat_game = str('Y')
+user_answer = input('Would you like to play number game? Y/N ')
+repeat_game = 'Y'
 if user_answer == repeat_game:
     number_game()
 else:
